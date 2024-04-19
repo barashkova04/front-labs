@@ -24,3 +24,29 @@ header {
     padding: 15px; 
     font-size: 16pt
 }
+
+a {
+    color: hotpink;
+    text-decoration: none;
+}
+
+a:link {
+    color: hotpink;
+    text-decoration: none;
+}
+
+a:visited {
+    color: cadetblue;
+}
+
+a:hover {
+    color: crimson;
+    text-decoration: underline;
+    background-color: rgba(230, 157, 170, 0.875);
+}
+
+a:active {
+    color: black;
+    opacity: 0.3;
+}
+
