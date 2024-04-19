@@ -28,6 +28,7 @@ header {
 a {
     color: hotpink;
     text-decoration: none;
+    transition: 1s 1s;
 }
 
 a:link {
@@ -43,6 +44,7 @@ a:hover {
     color: crimson;
     text-decoration: underline;
     background-color: rgba(230, 157, 170, 0.875);
+    transition: 0.3s;
 }
 
 a:active {
