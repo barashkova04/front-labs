@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Барашкова Светлана Консантиновна. Лабораторная 4</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" href="../lab_4/favicon.ico" type="image/x-icon">
+    <style>
+        div {
+            width: 300px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            background-color: aliceblue;
+            border: 1px dotted rgb(152, 64, 94);
+            margin: 15px;
+        }
+        .pos-rel{
+            position: relative;
+            left: 150px;
+            top: -135px;
+        }
+        .pos-rel:hover{
+            background-color: black;
+            z-index: -1;
+        }
+        .pos-abs{
+            position: absolute;
+            left: 300px;
+        }
+        .pos-abs:hover{
+            background-color: aqua;
+            width: 400px;
+            height: 80px;
+            box-shadow: 0 0 15px #ff7777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабраторная работа 2
+        <hr>
+    </header>
+
+    <main>
+        <div>static</div>
+        <div class="st">static</div>
+        <div class="pos-rel">relative</div>
+        <div class="st">static</div>
+        <div>static</div>
+        <div class="pos-abs">absolute</div>
+        <div>static</div>
+        <div>static</div>
+        <div>static</div>
+        <div>static</div>
+    </main>
+
+    <footer>
+        <hr>
+        &copy; Барашкова Светлана, ФБИ-22, 2 курс, 2024
+    </footer>
+</body>
+</html>
