@@ -13,6 +13,10 @@
             let result = a + b;
             alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
         }
+        function showAuthor() {
+            let author = 'Автор страницы:\nБарашкова Светлана Константиновна'
+            alert(author);
+        }
     </script>
     <style>
         .message{
@@ -29,13 +33,12 @@
     </style>
 </head>
 <body>
-    <header>
-        НГТУ, ФБ, Лабораторная работа 
+    <header onclick="showAuthor()"> 
     </header>
 
     <main>
         <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
-        <div class="message">Узнать, кто автор викторины</div>
+        <div class="message" onclick="showAuthor()">Узнать, кто автор викторины</div>
     </main>
 
     <footer>
