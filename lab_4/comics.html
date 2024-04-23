@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Барашкова Светлана Консантиновна. Лабораторная 4</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" href="../lab_4/favicon.ico" type="image/x-icon">
+    <style> 
+        .comic-container { 
+            position: relative; 
+            display: inline-block; 
+        } 
+
+        .comic-container img { 
+            display: block; 
+            width: 100%; 
+            height: auto; 
+        } 
+
+        .speech-bubble { 
+            position: absolute; 
+            padding: 20px 30px; 
+            background-color: rgba(252, 198, 198, 0.899); 
+            border-radius: 50%; 
+            border: 2px solid black; 
+            text-align: center; 
+            box-shadow: 2px 2px 4px rgba(36, 30, 30, 0.616); 
+            font-family: Arial, sans-serif; 
+            color: #000000; 
+            opacity: 0; 
+            transition: opacity 0.5s ease-in-out; 
+        } 
+
+        .comic-container:hover .speech-bubble { 
+            opacity: 1; 
+        } 
+
+        .speech-bubble:nth-child(2) { 
+            top: 25%; 
+            left: 35%; 
+        } 
+
+        .speech-bubble:nth-child(3) { 
+            top: 20%; 
+            left: 43%; 
+        } 
+
+        .speech-bubble:nth-child(4) { 
+            top: 15%; 
+            left: 51%; 
+        } 
+
+        .speech-bubble:nth-child(5) { 
+            top: 6%; 
+            left: 59%; 
+        } 
+    </style> 
+</head> 
+
+<body> 
+    <header> 
+        НГТУ, ФБ, Лабораторная работа 4 
+        <hr> 
+    </header> 
+
+    <main> 
+        <div class="comic-container"> 
+            <img src="comic.jpeg" alt="Comic Image"> 
+            <div class="speech-bubble"></div> 
+            <div class="speech-bubble"></div> 
+            <div class="speech-bubble"></div> 
+            <div class="speech-bubble">genius!</div> 
+        </div> 
+    </main> 
+
+    <footer> 
+        <hr> 
+        &copy; Барашкова Светлана ФБИ-22, 2 курс, 2024 
+    </footer> 
+</body> 
+</html>
