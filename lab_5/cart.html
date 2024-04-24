@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Барашкова Светлана Консантиновна. Лабораторная 5</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" href="../lab_4/favicon.ico" type="image/x-icon">
+    <script>
+        function showSum() {
+            let input1 = document.getElementById('cucumber')
+            let input2 = document.getElementById('tomato')
+            let input3 = document.getElementById('onion')
+            let input4 = document.getElementById('beet')
+            let input5 = document.getElementById('potato')
+
+            let resultat = document.getElementById('resultat');
+            let a = 90;
+            let b = 60;
+            let c = 15;
+            let d = 100;
+            let e = 35;
+
+            let a1 = parseInt(input1.value);
+            let b2 = parseInt(input2.value);
+            let c3 = parseInt(input3.value);
+            let d4 = parseInt(input4.value);
+            let e5 = parseInt(input5.value);
+            let result = a*a1 + b*b2 + c*c3 + d*d4 + e*e5;
+            resultat.innerHTML = 'Общая цена: ' + result + ' рублей';
+        }
+        function show() {
+            document.getElementById('cucumber').value = '';
+            document.getElementById('tomato').value = '';
+            document.getElementById('onion').value = '';
+            document.getElementById('beet').value = '';
+            document.getElementById('potato').value = '';
+
+            document.getElementById('resultat').innerHTML = '';
+        }
+    </script>
+
+    <style>
+        .message{
+            cursor: pointer;
+            display: inline-block;
+            border-color: brown;
+            border: 4px solid;
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px #0002;
+            margin: 20px;
+            width: 300px;
+            background-color: aliceblue;
+        }
+        .prod{
+            width: 400px;
+            border: 4px solid;
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px #0002;
+            display: inline-block;
+            vertical-align: top;
+            margin: 20px;
+            border-color: rgb(186, 18, 105);
+            text-align: center;
+        }
+        ::placeholder {
+            color: rgb(133, 133, 153);
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 
+    </header>
+
+    <main>
+        <div class="prod">
+            <h1>Корзина продуктов</h1>
+            <label>Огурцы(90 руб/шт.):<br><input type="number" placeholder="введите кол-во" value="0" id="cucumber"/></label><br>
+            <label>Помидоры(60 руб/шт.): <br><input type="number" placeholder="введите кол-во" value="0" id="tomato"></label><br>
+            <label>Лук(15 руб/шт.): <br><input type="number" placeholder="введите кол-во" value="0" id="onion"></label><br>
+            <label>Свекла(100 руб/шт.): <br><input type="number" placeholder="введите кол-во" value="0" id="beet"></label><br>
+            <label>Картошка(35 руб/шт.): <br><input type="number" placeholder="введите кол-во" value="0" id="potato"></label><br>
+            <div id="resultat"></div>
+            <div class="message" onclick="showSum()">Рассчитать</div>
+            <div class="message" onclick="show()">Сбросить</div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Барашкова Светлана, ФБИ-22, 2 курс, 2024
+    </footer>
+</body>
+</html>
