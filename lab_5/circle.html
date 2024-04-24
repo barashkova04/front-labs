@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Барашкова Светлана Константиновна</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" href="../lab_4/favicon.ico" type="image/x-icon">
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+
+        #resetButton {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header onclick="showAuthor()">
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+    <main>
+        <div class="circle" id="circle1" style="background-color: red;">1</div>
+        <div class="circle" id="circle2" style="background-color: blue;">2</div>
+        <div class="circle" id="circle3" style="background-color: green;">3</div>
+        <div class="circle" id="circle4" style="background-color: yellow;">4</div>
+        <div class="circle" id="circle5" style="background-color: purple;">5</div>
+        <div class="circle" id="circle6" style="background-color: orange;">6</div>
+        <div class="circle" id="circle7" style="background-color: cyan;">7</div>
+        <div class="circle" id="circle8" style="background-color: magenta;">8</div>
+        <div class="circle" id="circle9" style="background-color: gray;">9</div>
+        <div class="circle" id="circle10" style="background-color: pink;">10</div>
+        
+        <button id="resetButton">Сбросить</button>
+
+        <script>
+            document.querySelectorAll('.circle').forEach(item => {
+                item.addEventListener('click', () => {
+                    item.style.opacity = '0';
+                    item.style.width = '0';
+                    item.style.height = '0';
+                });
+            });
+            
+            document.getElementById('resetButton').addEventListener('click', () => {
+                document.querySelectorAll('.circle').forEach(item => {
+                    item.style.opacity = '1';
+                    item.style.width = '100px';
+                    item.style.height = '100px';
+                });
+            });
+        </script>
+    </main>
+    <footer>
+        &copy; Санданова Виктория, ФБИ-22, 2 курс, 2024
+    </footer>
+</body>
+</html>
