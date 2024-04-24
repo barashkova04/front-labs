@@ -16,9 +16,40 @@
             let result = a + b;
             alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
         }
+        function showDiff() {
+            let inputA = document.getElementById('numberA')
+            let inputB = document.getElementById('numberB')
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a - b;
+            alert('Разность' + a + ' и ' + b + ' равна ' + result);
+        }
+        function showMulti() {
+            let inputA = document.getElementById('numberA')
+            let inputB = document.getElementById('numberB')
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a * b;
+            alert('Произведение ' + a + ' и ' + b + ' равна ' + result);
+        }
+        function showDiv() {
+            let inputA = document.getElementById('numberA')
+            let inputB = document.getElementById('numberB')
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a / b;
+            alert('Деление ' + a + ' и ' + b + ' равна ' + result);
+        }
         function showAuthor() {
             let author = 'Автор страницы:\nБарашкова Светлана Константиновна'
             alert(author);
+        }
+        function showWelcome() {
+            let welcome = 'Приветсвтую вас на моей странице!!!:)'
+            alert(welcome);
         }
         function changeOutput(buttonNum, backColor, textColor, borderColor) {
             let output = document.getElementById('output');
@@ -45,17 +76,33 @@
             width: 300px;
             height: 40px;
         }
+        .footer{
+            cursor: pointer;
+        }
+        .number {
+            border-color: brown;
+            border: 4px solid;
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px #0002;
+            margin: 20px;
+            width: 300px;
+            height: 50px;
+            background-color: aliceblue;
+        }
     </style>
 </head>
 <body>
-    <header onclick="showAuthor()"> 
-    </header>
+    <header onclick="showAuthor()">НГТУ, ФБ, Лабораторная работа </header>
 
     <main>
-        <label>Первое число: <input type="number" value="5154" id="numberA"></label><br>
-        <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
+        <div class="number"><label>Первое число: <input type="number" id="numberA"></label><br></div>
+        <div class="number"><label>Второе число: <input type="number" id="numberB"></label><br></div>
         <div class="message" onclick="showSum()">Найти сумму чисел</div>
         <div class="message" onclick="showAuthor()">Узнать, кто автор викторины</div>
+        <div class="message" onclick="showDiff()">Найти разность</div>
+        <div class="message" onclick="showMulti()">Найти произведение</div>
+        <div class="message" onclick="showDiv()">Найти деление</div>
+
 
         <div>
             <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'red', 'yellow', 'green')">
@@ -67,7 +114,7 @@
         <div id="output"></div>
     </main>
 
-    <footer>
+    <footer class="footer" ondblclick="showWelcome()">
         &copy; Барашкова Светлана, ФБИ-22, 2 курс, 2024
     </footer>
 </body>
