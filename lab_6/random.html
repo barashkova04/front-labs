@@ -18,6 +18,12 @@
             border-color: palevioletred;
             text-align: center;
         }
+        .rulesBlock {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: none;
+        }
     </style>
     <script>
         let number;
@@ -62,6 +68,17 @@
             document.getElementById('result').innerHTML = '';
             
         }
+        function showRules() {
+            document.getElementById("rulesBlock").style.display = "block";
+            document.getElementById("showRulesBtn").style.display = "none";
+            document.getElementById("hideRulesBtn").style.display = "inline-block";
+        }
+        function hideRules() {
+            document.getElementById("rulesBlock").style.display = "none";
+            document.getElementById("showRules").style.display = "inline-block";
+            document.getElementById("hideRules").style.display = "none";
+        
+        }
     </script>
 </head>
 <body>
@@ -96,6 +113,21 @@
             </div>
             <div>
                 <button onclick="again()">Сыграть еще раз</button>
+            </div>
+        </div>
+
+        <div id="helpBlock">
+            <button id="showRulesBtn" onclick="showRules()">Показать правила игры</button>
+            <button id="hideRulesBtn" onclick="hideRules()" style="display: none;">Скрыть правила игры</button>
+            <div id="rulesBlock" style="display: none;">
+                <h3>Правила игры:</h3>
+                <ol>
+                    <li>Первое правило.</li> 
+                    <li>Второе правило.</li>
+                    <li>Третье правило.</li>
+                    <li>Четвертое правило.</li>
+                    <li>Пятое правило.</li>
+                </ol>
             </div>
         </div>
     </main>
