@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Барашкова Светлана Консантиновна. Лабораторная 6</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="icon" href="../lab_4/favicon.ico" type="image/x-icon">
+        <style>
+        .color{ 
+            cursor: pointer;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin: 200px;
+            padding: 50px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 1px;
+            transition: all 0.5s;
+        }
+        .footer{
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            function changeColor(div) {
+                if(div.style.backgroundColor == 'yellow') {
+                div.style.backgroundColor = "red";
+                document.getElementById('color-name').innerHTML = 'красный';
+                div.style.color = 'white';
+            }
+            else if(div.style.backgroundColor == 'red') {
+                div.style.backgroundColor = 'black';
+                document.getElementById('color-name').innerHTML = 'черный';
+                div.style.color = 'red';
+            }
+            else if(div.style.backgroundColor == 'black') {
+                div.style.backgroundColor = 'pink';
+                document.getElementById('color-name').innerHTML = 'Розовый';
+                div.style.color = 'blue';
+            }
+            else if(div.style.backgroundColor == 'pink') {
+                div.style.backgroundColor = 'green';
+                document.getElementById('color-name').innerHTML = 'зеленый';
+                div.style.color = 'yellow';
+            }
+            else if(div.style.backgroundColor == 'green') {
+                div.style.backgroundColor = 'blue';
+                document.getElementById('color-name').innerHTML = 'синий';
+                div.style.color = 'purple';
+            }
+            else if(div.style.backgroundColor == 'blue') {
+                div.style.backgroundColor = 'purple';
+                document.getElementById('color-name').innerHTML = 'фиолетовый';
+                div.style.color = 'green';
+            }
+            else if(div.style.backgroundColor == 'purple') {
+                div.style.backgroundColor = 'white';
+                document.getElementById('color-name').innerHTML = 'белый';
+                div.style.color = 'black';
+            }
+            else {
+                div.style.backgroundColor = 'yellow';
+                document.getElementById('color-name').innerHTML = 'желтый';
+                div.style.color = 'pink';
+            }
+        }
+        </script>
+    </head>
+
+    <body>
+        <header class="footer" onclick="showAuthor()">
+            НГТУ, ФБ, Лабораторная работа 6
+        </header>
+        
+        <main>
+            <div class="color" ondblclick="changeColor(this)">
+                Цвет: <span id="color-name">Желтый</span><br>
+                Сделайте двойной щелчок, чтобы сменить.
+            </div>
+        </main>
+
+        <footer>
+            &copy; Барашкова Светлана, ФБИ-22, 2 курс, 2024
+        </footer>
+    </body>
+</html>
