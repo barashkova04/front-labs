@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <title>Барашкова Светлана Консантиновна. Лабораторная 5</title>
+        <title>Барашкова Светлана Константиновна.Фильтры</title>
         <link rel="stylesheet" href="../main.css">
         <link rel="icon" href="../lab_4/favicon.ico" type="image/x-icon">
         <script>
@@ -11,21 +11,95 @@
                 document.getElementById('blurOutput').innerText = value;
                 document.getElementById("blurImage").style.filter = 'blur('+ value +')';
             }
+            function brightness() {
+                let value = document.getElementById("brightness").value + '%';
+                document.getElementById('brightnessOutput').innerText = value;
+                document.getElementById("brightnessImage").style.filter = 'brightness('+ value +')';
+            }
+            function contrast() {
+                let value = document.getElementById("contrastValue").value + '%';
+                document.getElementById('contrastOutput').innerText = value;
+                document.getElementById("contrastImage").style.filter = 'contrast()('+ value +')';
+            }
+            function grayscale() {
+                let value = document.getElementById("grayscaleValue").value + '%';
+                document.getElementById('grayscaleOutput').innerText = value;
+                document.getElementById("grayscaleImage").style.filter = 'grayscale('+ value +')';
+            }
+            function huerotate() {
+                let value = document.getElementById("huerotateValue").value + '%';
+                document.getElementById('huerotateOutput').innerText = value;
+                document.getElementById("huerotateImage").style.filter = 'huerotate('+ value +')';
+            }
+            function invert() {
+                let value = document.getElementById("invertValue").value + '%';
+                document.getElementById('invertOutput').innerText = value;
+                document.getElementById("invertImage").style.filter = 'invert('+ value +')';
+            }
+            function saturate() {
+                let value = document.getElementById("saturateValue").value + '%';
+                document.getElementById('saturateOutput').innerText = value;
+                document.getElementById("saturateImage").style.filter = 'saturate('+ value +')';
+            }
+            function sepia() {
+                let value = document.getElementById("sepiaValue").value + '%';
+                document.getElementById('sepiaOutput').innerText = value;
+                document.getElementById("sepiaImage").style.filter = 'sepia('+ value +')';
+            }
         </script>
+        <style>
+            .filter {
+                width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin: 10px;
+                padding: 10px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                display: inline-block;
+                background-color: #2a1919;
+                
+             }
+        </style>
     </head>
-
     <body>
         <header onclick="showAuthor()">
             НГТУ, ФБ, Лабораторная работа 5
         </header>
         
         <main>
-            <div>
-                Фильтр blur:
-                <input type="range" min="0" max="20" value="0" onchange="blurChange()" id="blurValue">
-                <span id="blurOutput"></span>
-            </div>
-            <div><img src="C:\Sveta-Barashkova\front-labs\lab_4\kinder.jpeg" id="blurImage"></div>
+            <div><img src="C:\Sveta-Barashkova\front-labs\lab_5\monk.jpeg" id="blurImage"></div>
+            Фильтр blur:
+            <div class="filter"><input type="range" min="0" max="20" value="0" onchange="blurChange()" id="blurValue">
+                <span id="blurOutput"></span></div>
+            <div><img src="C:\Sveta-Barashkova\front-labs\lab_5\monk.jpeg" id="brightnessImage"></div>
+            Фильтр яркость:
+                <div class="filter"><input type="range" min="0" max="500" value="100" onchange="brightness()" id="brightnessValue">
+                <span id="brightnessOutput"></span></div>
+            <div><img src="C:\Sveta-Barashkova\front-labs\lab_5\monk.jpeg" id="contrastImage"></div>
+            Фильтр контраст:
+                <div class="filter"><input type="range" min="0" max="500" value="100" onchange="contrast()" id="contrastValue">
+                <span id="contrastOutput"></span></div>
+            <div><img src="C:\Sveta-Barashkova\front-labs\lab_5\monk.jpeg" id="grayscaleImage"></div>
+            Фильтр оттенки серого:
+                <div class="filter"><input type="range" min="0" max="100" value="0" onchange="grayscale()" id="grayscaleValue">
+                <span id="grayscaleOutput"></span></div>
+            <div><img src="C:\Sveta-Barashkova\front-labs\lab_5\monk.jpeg" id="huerotateImage"></div>
+            Фильтр оттенок цвета:
+                <div class="filter"><input type="range" min="0" max="360" value="0" onchange="huerotate()" id="huerotateValue">
+                <span id="huerotateOutput"></span></div>
+            <div><img src="C:\Sveta-Barashkova\front-labs\lab_5\monk.jpeg" id="invertImage"></div>
+            Инвертирование цвета:
+            <div class="filter"><input type="range" min="0" max="100" value="0" onchange="invert()" id="invertValue">
+            <span id="invertOutput"></span></div>
+            <div><img src="C:\Sveta-Barashkova\front-labs\lab_5\monk.jpeg" id="saturateImage"></div>
+            Фильтр насыщенности цвета:
+                <div class="filter"><input type="range" min="0" max="500" value="100" onchange="saturate()" id="saturateValue">
+                <span id="saturateOutput"></span></div>
+            <div><img src="C:\Sveta-Barashkova\front-labs\lab_5\monk.jpeg" id="sepiaImage"></div>
+            Фильтр сепия(Эффект старой фотографии)
+                <div class="filter"><input type="range" min="0" max="100" value="0" onchange="sepia()" id="sepiaValue">
+                <span id="sepiaOutput"></span></div>
         </main>
 
         <footer>
