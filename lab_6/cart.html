@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Барашкова Светлана Константиновна.Корзина товаров</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="icon" href="../lab_4/favicon.ico" type="image/x-icon">
+        <script>
+            function calculateTotal() {
+            let balance = document.getElementById("balance").value;
+            let total = 0;
+            let error = "";
+
+            for (let i = 1; i <= 7; i++) {
+                let quantity = document.getElementById("quantity" + i).value;
+                if (quantity < 0) {
+                    error = "Количество товара не может быть отрицательным";
+                    break;
+                }
+                if (!quantity) {
+                    quantity = 0;
+                }
+                total += quantity * document.getElementById("cart").rows[i].cells[1].innerHTML;
+            }
+
+            if (total > balance) {
+                error = "Недостаточно средств на балансе";
+            } else if (total === 0) {
+                error = "Выберите хотя бы один товар";
+            }
+
+            if (error) {
+                document.getElementById("error").innerHTML = error;
+                document.getElementById("total").innerHTML = "";
+            } else {
+                document.getElementById("total").innerHTML = "Итоговая сумма: " + total;
+                document.getElementById("error").innerHTML = "Товар успешно оформлен";
+            }
+        }
+        </script>
+                 <style>
+                    .prod{
+                        width: 500px;
+                        height: 600px;
+                        border: 10px solid;
+                        border-radius: 10px;
+                        box-shadow: 10px 10px 50px #0002;
+                        display: inline-block;
+                        text-align: center;
+                        margin: 10px;
+                        background-color: aquamarine;
+                        
+                    }
+                </style>
+    </head>
+    <body>
+      <header onclick="showAuthor()">
+          НГТУ, ФБ, Лабораторная работа 6
+      </header>
+      
+      <main>
+          <body>
+              <div class="prod">
+              <h2>Мой баланс: <input type="number" id="balance"></h2>
+              <table border="1" width="100%" id="cart">
+                  <tr>
+                      <td>Название</td>
+                      <td>Цена</td>
+                      <td>Количество</td>
+                  </tr>
+                  <tr>
+                      <td>Футбольный мяч</td>
+                      <td>500</td>
+                      <td><input type="number" id="quantity1"></td>
+                  </tr>
+                  <tr>
+                      <td>Футболка</td>
+                      <td>799</td>
+                      <td><input type="number" id="quantity2"></td>
+                  </tr>
+                  <tr>
+                      <td>Джинсы</td>
+                      <td>1350</td>
+                      <td><input type="number" id="quantity3"></td>
+                  </tr>
+                  <tr>
+                      <td>Кроссовки</td>
+                      <td>2500</td>
+                      <td><input type="number" id="quantity4"></td>
+                  </tr>
+                  <tr>
+                      <td>Носки</td>
+                      <td>100</td>
+                      <td><input type="number" id="quantity5"></td>
+                  </tr>
+                  <tr>
+                      <td>Рубашка</td>
+                      <td>1500</td>
+                      <td><input type="number" id="quantity6"></td>
+                  </tr>
+                  <tr>
+                      <td>Шорты</td>
+                      <td>1000</td>
+                      <td><input type="number" id="quantity7"></td>
+                  </tr>
+              </table>
+              <button onclick="calculateTotal()">OK</button>
+  
+              <p id="total"></p>
+              <p id="error"></p>
+              </div>
+          </body>
+      </main>
+       <footer>
+          &copy; Барашкова Светлана, ФБИ-22, 2 курс, 2024
+      </footer>
+  </body>
+</html>
