@@ -72,6 +72,18 @@
             Фильтр blur:
             <div class="filter"><input type="range" min="0" max="20" value="0" onchange="blurChange()" id="blurValue">
                 <span id="blurOutput"></span></div>
+            <div><img src="C:\Sveta-Barashkova\front-labs\lab_5\monk.jpeg" id="invertImage"></div>
+            Инвертирование цвета:
+            <div class="filter"><input type="range" min="0" max="100" value="0" onchange="invert()" id="invertValue">
+                <span id="invertOutput"></span></div>
+            <div><img src="C:\Sveta-Barashkova\front-labs\lab_5\monk.jpeg" id="saturateImage"></div>
+            Фильтр насыщенности цвета:
+            <div class="filter"><input type="range" min="0" max="500" value="100" onchange="saturate()" id="saturateValue">
+                <span id="saturateOutput"></span></div>
+            <div><img src="C:\Sveta-Barashkova\front-labs\lab_5\monk.jpeg" id="sepiaImage"></div>
+            Фильтр сепия(Эффект старой фотографии)
+            <div class="filter"><input type="range" min="0" max="100" value="0" onchange="sepia()" id="sepiaValue">
+                <span id="sepiaOutput"></span></div>
             <div><img src="C:\Sveta-Barashkova\front-labs\lab_5\monk.jpeg" id="brightnessImage"></div>
             Фильтр яркость:
                 <div class="filter"><input type="range" min="0" max="500" value="100" onchange="brightness()" id="brightnessValue">
@@ -88,18 +100,6 @@
             Фильтр оттенок цвета:
                 <div class="filter"><input type="range" min="0" max="360" value="0" onchange="huerotate()" id="huerotateValue">
                 <span id="huerotateOutput"></span></div>
-            <div><img src="C:\Sveta-Barashkova\front-labs\lab_5\monk.jpeg" id="invertImage"></div>
-            Инвертирование цвета:
-            <div class="filter"><input type="range" min="0" max="100" value="0" onchange="invert()" id="invertValue">
-            <span id="invertOutput"></span></div>
-            <div><img src="C:\Sveta-Barashkova\front-labs\lab_5\monk.jpeg" id="saturateImage"></div>
-            Фильтр насыщенности цвета:
-                <div class="filter"><input type="range" min="0" max="500" value="100" onchange="saturate()" id="saturateValue">
-                <span id="saturateOutput"></span></div>
-            <div><img src="C:\Sveta-Barashkova\front-labs\lab_5\monk.jpeg" id="sepiaImage"></div>
-            Фильтр сепия(Эффект старой фотографии)
-                <div class="filter"><input type="range" min="0" max="100" value="0" onchange="sepia()" id="sepiaValue">
-                <span id="sepiaOutput"></span></div>
         </main>
 
         <footer>
