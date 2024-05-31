@@ -33,5 +33,15 @@ function showDate() {
     document.getElementById('month').textContent = `Текущий месяц: ${month}`;
     document.getElementById('date').textContent = `Текущая дата: ${date}`;
     document.getElementById('day').textContent = `День недели: ${day}`;
+
+    document.getElementById('calculateBtn').addEventListener('click', function() {
+        const inputDate = document.getElementById('inputDate').value;
+        const inputMonth = document.getElementById('inputMonth').value - 1;
+        const inputYear = document.getElementById('inputYear').value;
+        const date = new Date(inputYear, inputMonth, inputDate);
+        const options = { weekday: 'long' };
+        const dayOfWeek = date.toLocaleString('default', options);
+        document.getElementById('output').textContent = `День недели: ${dayOfWeek}`;
+      });
 }
 
