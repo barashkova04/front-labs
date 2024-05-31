@@ -1,0 +1,79 @@
+clock {
+	font-family:Tahoma, sans-serif;
+	font-size:20px;
+	color:red;	
+  }
+
+body {
+    background-color: rgb(241, 206, 212); 
+    color: palevioletred; 
+    font-family: Arial; 
+    margin: 0px;
+}
+
+main {
+    margin: 10px 20px 70px;
+}
+
+footer {
+    background-color: rgb(253, 236, 239); 
+    color: rgba(131, 47, 75, 0.878); 
+    padding: 15px; 
+    font-size: 12pt; 
+    font-style: italic; 
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+header {
+    background-color: rgb(253, 236, 239); 
+    color: rgba(131, 47, 75, 0.878); 
+    padding: 15px; 
+    font-size: 16pt
+}
+
+a {
+    color: hotpink;
+    text-decoration: none;
+    transition: 1s 1s;
+}
+
+a:link {
+    color: hotpink;
+    text-decoration: none;
+}
+
+a:visited {
+    color: cadetblue;
+}
+
+a:hover {
+    color: crimson;
+    text-decoration: underline;
+    background-color: rgba(230, 157, 170, 0.875);
+    transition: 0.3s;
+}
+
+a:active {
+    color: black;
+    opacity: 0.3;
+}
+
+div.menu {
+    border: 7px solid;
+    border-radius: 5px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+div.menu:hover {
+    background-color: rgb(196, 158, 164);
+    box-shadow: 0 0 15px #ff7777;
+}
+
+h1 {
+    text-align: center;
+}
