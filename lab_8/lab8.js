@@ -22,4 +22,16 @@ function showDate() {
     let out6 = document.getElementById('current-dateEG')
     let today6 = new Date();
     out6.innerHTML = today6.toLocaleString('ar-EG');
+
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = currentDate.toLocaleString('default', { month: 'long' });
+    const date = currentDate.getDate();
+    const day = currentDate.toLocaleString('default', { weekday: 'long' });
+
+    document.getElementById('year').textContent = `Текущий год: ${year}`;
+    document.getElementById('month').textContent = `Текущий месяц: ${month}`;
+    document.getElementById('date').textContent = `Текущая дата: ${date}`;
+    document.getElementById('day').textContent = `День недели: ${day}`;
 }
+
