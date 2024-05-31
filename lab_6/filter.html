@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Барашкова Светлана Константиновна.Фильтрация</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="icon" href="../lab_4/favicon.ico" type="image/x-icon">
+    <script>
+        function filter() {
+            let color = document.getElementById('wear-color').value;
+            let type = document.getElementById('wear-type').value;
+            let wear = document.getElementById('wear');
+
+            if(color == 'Красная' && type == 'Футболка') {
+                wear.src = 'C:\Sveta-Barashkova\front-labs\lab_6\pictures\краснаяфутболка.jpeg';
+            }
+
+            else if(color == 'Белая' && type == 'Футболка') {
+                wear.src = 'front-labs\lab_6\pictures\белаяфутболка.jpeg';
+            }
+
+            else if(color == 'Черная' && type == 'Футболка') {
+                wear.src = 'front-labs\lab_6\pictures\чернаяфутболка.jpeg';
+            }
+
+            else if(color == 'Красное' && type == 'Поло') {
+                wear.src = 'front-labs\lab_6\pictures\красноеполо.jpeg';
+            }
+
+             else if(color == 'Белое' && type == 'Поло') {
+                wear.src = 'front-labs\lab_6\pictures\белоеполо.jpeg';
+            }
+
+            else if(color == 'Черное' && type == 'Поло') {
+                wear.src = 'front-labs\lab_6\pictures\черноеполо.jpeg';
+            }
+
+            else if(color == 'Красная' && type == 'Майка') {
+                wear.src = 'front-labs\lab_6\pictures\краснаямайка.jpeg';
+            }
+            else if(color == 'Белая' && type == 'Майка') {
+                wear.src = 'C:\Sveta-Barashkova\front-labs\lab_6\белаямайка.jpeg';
+            }
+            else {
+                (color == 'Черная' && type == 'Майка') 
+                wear.src = 'front-labs\lab_6\pictures\чернаямайка.jpeg';
+            }
+        }
+    </script>
+    <style>
+        .wear{
+            position: relative; 
+            display: inline-block;
+        }
+    </style>
+    </head>
+
+    <body>
+        <header onclick="showAuthor()">
+            НГТУ, ФБ, Лабораторная работа 6
+        </header>
+        
+        <main>
+            <div>
+                Цвет одежды:
+                <select id="wear-color">
+                    <option>Красный</option>
+                    <option>Белый</option>
+                    <option>Черный</option>
+                </select><br>
+
+                Тип одежды:
+                <select id="wear-type">
+                    <option>Футболка</option>
+                    <option>Поло</option>
+                    <option>Майка</option>
+                </select><br>
+
+                <button onclick="filter()">ОК</button><br>
+
+                <img id="wear">
+            </div>
+        </main>
+
+        <footer>
+            &copy; Барашкова Светлана, ФБИ-22, 2 курс, 2024
+        </footer>
+    </body>
+</html>
