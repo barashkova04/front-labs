@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 8</title>
+    <link rel="stylesheet" href="../main.css">
+    <script src="time2.js"></script>
+
+    <style>
+         #time { 
+            position: absolute; 
+            top: 10px; 
+            right: 20px; 
+            font-size: 20px; 
+            color: #120fdc; 
+            font-family: 'Arial', sans-serif; 
+        } 
+        #seconds { 
+            font-size: 100px; 
+            color: #a53131; 
+            text-align: center; 
+            margin-top: 20px; 
+        } 
+        #clock-container { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: column; 
+        } 
+        #clock { 
+            width: 200px; 
+            height: 200px; 
+            border: 5px solid #333; 
+            border-radius: 50%; 
+            position: relative; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        } 
+        #second-hand { 
+            width: 2px; 
+            height: 90px; 
+            background: rgb(160, 47, 47); 
+            position: absolute; 
+            bottom: 50%; 
+            transform-origin: bottom; 
+            transform: rotate(0deg); 
+            transition: transform 1s linear; 
+        } 
+    </style>
+</head>
+<body onload="showDate()">
+    <header >  
+        НГТУ, ФБ, Лабораторная работа 8
+        <div id="time">00:00:00</div>
+    </header>
+
+    <main>  
+        <div id="seconds">00</div> 
+        <div id="clock-container"> 
+        <div id="clock"> 
+            <div id="second-hand"></div> 
+        </div> 
+    </main>
+
+    <footer>
+        &copy; Барашкова Светлана, ФБИ-22, 2 курс, 2024
+    </footer>
+
+</body>
+</html>
